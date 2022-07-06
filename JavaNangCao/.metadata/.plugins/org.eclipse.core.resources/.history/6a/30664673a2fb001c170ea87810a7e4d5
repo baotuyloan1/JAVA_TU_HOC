@@ -1,0 +1,24 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+//		Person a = new Student();
+//		Person t = new Teacher();
+		
+//		toString1(t);
+		Integer inta = 5;
+		vidu(inta);
+		System.out.println(inta);
+
+	}
+	
+	public static void toString1(Person a) {
+		
+	}
+	
+	public static void vidu(Integer b) {
+		b = 10;
+	} 
+	
+
+}

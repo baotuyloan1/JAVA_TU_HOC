@@ -1,0 +1,168 @@
+Override : kiểu trả về không thay đổi, các số lượng tham số, kiểu tham số, thứ tự tham số không thay đổi, tên phương thức không thay đổi. chỉ thay đổi nội dung code trong hàm đó thôi
+Overloading: có thể nạp chồng phương thức main.
+không thể tạo phương thức nạp chồng mà chỉ khác khau về kiểu trả về
+- muốn nạp chồng thì phải khác nhau về tham số. khác về số lượng hoặc kiểu dữ liệu tham số
+
+JDK: java development kit.Chứa tất mọi thứ yêu cầu để phát triển và chạy bất kỳ ứng dụng java nào
+
+JRE: java Runtime Environment. Với Java chúng ta có JRE như là một runtime environment, nó gồm có các Java class libraries, Java class loader, và Java Vitrual Machine. Nó chứa tất cả những thứ cần thiết để chạy 1 ứng dụng được viết bằng nn java
+
+
+java có 3 loại biến: local, instance, static
+hàm có 2 loại hàm: instace , class
+Biến và Hàm Class hay Static
+
+Hàm và biến Instace(setter và getter), biến, hàm đối tượng, không chưa static
+
+biến local được khai báo trong hàm
+
+Trong mỗi class trong java phải có ít nhất 1 public class, và tên public class phải trùng với thên file
+
+Bộ nhớ Heap và Stack
+Bộ nhớ stack có dung lượng nhỏ hơn dùng để lưu các biến cục bộ. các lời gọi hàm, các biến tham chiếu
+
+bộ nhớ heap dùng để lưu các đối tượng, new Object 
+
+Kế thừa trong java
+Kế thừa là khả năng thừa hưởng lại những biến và hàm của 1 class khác
+CLasss kế thừa gọi là subclass ( class con). Class được kế thừa gọi là superclass(class cha)
+SUperclass có thể có nhiều subclass. Subclass chỉ có duy nhất 1 superclass
+Extends keyword để kế thừa
+
+Đa hình : Biến kiểu dữ liệu cha có thể gán cho đối tượng con. Nhưng nó chỉ gọi được các phương thúc có trong lớp cha, ưu tiên các phương thức overide từ lớp con. Muốn dùng các phương thức của lớp con thì ép kiểu xuống
+
+Class Object mặc dịnh là cha mọi class
+
+Instanceof : kiểm tra xem biến đó có phải là kiễu dữ tra hay khong. 
+Kiểu dữ liệu của cha thì con có thể dùng làm tham số
+
+Tính đóng gói. GIống bảo mật, liên quan đến private,protected, default, public
+Người dùng k truy cập vào các thuộc tính private. chỉ truy cập thong qua hàm, gọi là đóng gói
+
+
+absstract class Person có thể chứa hàm abstract hoặc không. abstract không thể khởi tạo đối tượng
+abstact có hàm abstract. các lớp con kết thừa lớp abstract phải overide lại tất cả các hàm abstract
+hàm abstract chỉ được khởi tạo ở lớp abstract và lớp interface 
+
+
+interface Person tất cả các hàm trên interface đều là public astract. nếu không có public astract thì nó tự ngầm định luôn. Không thể khai báo private ...
+các biến đều là public. muốn kế thừa interfaces thì phải dùng implments. Interface để chứa hàng số. Vì nó không khởi tạo được các giá trị của biến thông qua hàm 
+
+không có biến abstract, chỉ có hàm absstract. hàm abstract không có gì. các lớp con extend thì phải override và viết lại logic cho hàm đó
+
+Interface có thể kết thừa nhiều interfaces khác thông qua extends ..,..,..
+1 class có thể implements nhiều interface khác nhau thông qua implements .., ..,...
+
+abstract khi implements interface thì k cần overide lại các hàm trong interface
+chỉ có các class khi implements interface thì mới cần overide lại các hàm đó
+
+abstract kết thừa interface thì dùng implemenst
+interface kế thừu thì dùng extends
+interface thì được extends nhiều interface khác, nhưng class thì chỉ extends được 1 class cha
+1 class có thể implements nhiều interfaces
+
+
+stringbuilder trong môi trường đồng bộ và stringbuffer trong môi trường bất đồng bộ: xem lại
+
+
+exception .
+exception là 1 lỗi xảy ra trong quá trình chạy chương trình Java, khiến cho chương trình bị dừng lại
+exception có 3 loại chính:
+- checked exception : có thể biết trước ở compile time
+- unchecked exception : không đoán trước được do code kém
+Errors : lỗi của máy ảo, hoặc thiếu bộ nhớ. Không thể fix trong code
+
+khi try catch exception, execption phải để dưới cùng
+finally luôn thực thi trong trycatch dù có exceptoon hay là không. finally ở cuois cùng
+finally thường dùng để đóng cái gì đó sau khi try
+
+throw/throws
+
+Runtime Exception : được bắn ra khi chạy chương trình, không báo trước, không bắt buộc trycatch. Nhưng khi chạy nó sẽ ra lỗi
+
+Compile Exception : được cảnh báo khi code, bắt buộc phải trycatch hoặc throws
+Để tạo class của Runtime Exception thì extends class RuntimeEx, nhưng để tạo class của Compile Exception thì extends exceptions nào cũng được ngoại trừ thằng runtimeex
+đối với runtime không cần trycatch nhưng có thể xảy ra lỗi khi ta chạy
+combinetime : tạo ra và biết trước
+
+
+Enum: giống class lai với hằng số
+enum thì constructor phải là private
+
+Thread: khởi tạo Thread thì implemeants Runnable
+hoặc extends class THread. RUn nó chạy theo dòng, còn start là chạy liên tục, không liên quan. run thì đợi cái trc hoàn thành r mới chạy cái sau
+Synchronized : thread nào vào trước thì khóa hàm đó lại . thằng sau không được vào nữa
+class implements runnable : 1 đối tượng, tuy xuất = nhiều thread gọi vào
+
+class extends thread : kiểm thửu DDOS tạo ra 1 nghìn người dùng, độc lập nhau
+
+Lệnh join trong thread : đợi thread gọi lệnh join chạy xong rồi các thread khác mới start
+
+Thread Priority
+Deamon Thread : thread chạy ngầm
+
+
+deadlock là tình huống 2 Thread phải đợi nhau mãi mãi do truy xuất vào hàm dồng bộ của đối tượng đang bị lock lẫn nhau
+
+hàm hashCode và equals dùng để so sánh đối tượng và collection
+Integer y = new Integer(10);Integer wrapper class, y là kiểu dữ liệu tham chiếu
+int x = 10; x là kiểu dữ liệu cơ bản
+int z = x + y; //autoboxing, cụ thể là unboxing , chuyển Integer về int
+Wrapper class dùng để chuyển string về int,double...
+Wrapper class dùng cấu trúc dữ liệu và giải thuật
+Long.valueOf or Long.parseLong
+Boolean.valueOf or Boolean.parseBool...
+
+Integer k = 10; //boxing, tự đổi chuyển int thành Integer. nó tương đương với Integer k = new Integer(10);
+muốn so sánh 2 đối tượng của 2 kiểu dữ liệu tham chiếu trong wrapper class thì phải dùng equal
+
+
+Java Collection Framework. Cấu trúc dữ liệu và giải thuât. Chỉ làm việc với kiểu dữ liệu đối tượng.
+Java Collections chia làm 2 nhóm chính: Collection và Map(2 cái này đều là Interface)
+List: danh sách các phần tử, có thể trùng nhau, arrayList, linkedList, vector(mọi hàm của nó đều synchonide đồng bộ hóa)
+Hiệu xuất của vector sẽ thấp hơn arraylist , nhưng nó bảo mật cao hơn, đồng bộ
+
+ArrayList sử dụng mảng động để lưu trữ các phần tử.
+Các phần tử trong LinkedList được gọi là node, mỗi node cần lưu trữ 3 thông tin: tham chiếu phần tử trước nó, giá trị của phần tử và một tham chiếu tới phần tử kế tiếp.
+Thao tác thêm và xóa phần tử với ArrayList là chậm bởi vì nó sử dụng nội bộ mảng. Bởi vì sau khi thêm hoặc xóa các phần tử cần sắp xếp lại.
+Thao tác thêm và xóa phần tử với LinkedList nhanh hơn ArrayList. Bởi vì nó không cần sắp xếp lại các phần tử sau khi thêm hoặc xóa. Nó chỉ cần cập nhật lại tham chiếu tới phần tử phía trước và sau nó.
+
+Truy xuất phần tử trong ArrayList nhanh hơn LinkedList. Bởi vì các phần tử trong ArrayList được lưu trữ dựa trên chỉ mục (index).
+Thao tác truy xuất phần tử trong LinkedList chậm hơn nhiều so với ArrayList. Bởi vì, nó phải duyệt qua lần lượt các phần tử từ đầu tiên cho đến cuối cùng.
+
+ArrayList tốt hơn trong việc lưu trữ và truy xuất dữ liệu (get).
+LinkedList tốt hơn trong việc thao tác dữ liệu (thêm/ xóa).
+
+
+Sắp xếp các phần tử trong list thì implements comparable hoặc new anomynous class Comparator
+muống lặp và xóa các phần từ trong collection thì dùng iterator
+Iterator<String> itr = list.iterator();
+while(itr.hasNext()) {
+			System.out.println(itr.next());
+			if(itr.next().equals("A")) {
+				itr.remove();
+			}
+		}
+
+Set: tập hợp các phần tử khác nhau. 
+HashSet- không duy trì bất kỳ thứ tự các phần tử được thêm vào.
+LinkedHashSet- vị trí vẫn dữ nguyên khi nhập vào.
+TreeSet - 
+muốn súa trong set thì phải overide hàm equals và hashCode
+
+
+trong List thì so sánh dùng hàm equals. nhưng trong set so sánh thì dùng hashcode
+QUeue: gióng như xếp hàng, linkedList. | queue poll, add
+Map: tập hợp giá trị key/value, hashMap, treeMap
+-treeMap: các phần tử sắp xếp theo thứ tự tăng dần của 
+
+notify - notifyALl trong thread
+StringPool
+Tham chiếu, tham trị
+Toán tử UNION trong SQL
+subquery trong sql
+stored procedure trong sql
+Sử dụng trigger trong SQL qua ví dụ cơ bản
+search binary nhị phân
+Generics in Java
+So sánh linkedlist và arraylist

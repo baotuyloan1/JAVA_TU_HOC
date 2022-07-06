@@ -1,0 +1,34 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		Student a = new Student();
+		Person t = new Teacher();
+		
+		a.setName("bao");
+		a.setClasses(12);
+		
+		toString1(a);
+		
+	}
+	
+	public static void toString1(Person a) {
+		if (a instanceof Student) {
+			Student s = (Student)a;
+			System.out.println(s.getName() + s.getClass());
+		}else if (a instanceof Teacher) {
+			Teacher t = (Teacher)a;
+			t.setSubject("Toan");
+			System.out.println(t.getName() + t.getSubject());
+		}
+	}
+	public static void setValue(Person a) {
+		
+	}
+	
+
+	
+
+	
+
+}

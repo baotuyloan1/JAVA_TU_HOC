@@ -1,0 +1,51 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		Person a = new Student();
+		Person t = new Teacher();
+		
+//		toString1(t);
+		a.setName("bao");
+		vidu1(a);
+		System.out.println(a.getName());
+//		System.out.println(a.getName());
+		String string1 = "34234";
+		String string2 = "34234";
+		String string3 = new String("34234");
+		if (string1.equals(string2)) {
+			System.out.println("bang nhau");
+		}
+		if(string1 == string3) {
+			System.out.println("1 != 3");
+		}
+		if(string1 == string2) {
+			System.out.println("1 == 2");
+		}
+	}
+	
+	public static void toString1(Person a) {
+		
+		if (a instanceof Student) {
+			Student s = (Student)a;
+			System.out.println(s.getName() + s.getClass());
+		}else if (a instanceof Teacher) {
+			Teacher t = (Teacher)a;
+			System.out.println(t.getName() + t.getSubject());
+		}
+	}
+	
+	public static void vidu(Person b) {
+		Student c = new Student();
+		c.setName("bao1");
+		b = c;
+	} 
+	
+	public static void vidu1(Person b) {
+		b.setName("bao1");
+	} 
+	
+
+	
+
+}

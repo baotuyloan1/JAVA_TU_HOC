@@ -1,0 +1,32 @@
+Iterator trong Java là một interface được sử dụng để thay thế Enumerations trong Java Collection Framework. Bạn có thể sử dụng interator để: Duyệt các phần tử từ đầu đến cuối của một collection. Iterator cho phép xóa phần tử khi lặp một collection.
+
+arrayList -add. có add đối tượng. add theo vị trí
+	- remove: xoa theo vị trí
+	- set(2,"ABC). update phần tử tại vị trí 2
+	-get(i). lấy phần tử ở vị trí thứ i
+	-clear: xóa hết phần tử trong mảng
+	- size: kích thước
+
+
+vector: same same với arrayList
+	-vectir khởi tạo nó có 10 phần tử luôn, nó cứ tăng lên 10 phần tử
+	-sử lý nhanh hơn arrayList, nhưng nhược thì thừa nhiều nhất số không gian là 10 phần tử
+
+linkedList:1 phần tử có 2 giá trị, 1 giá trị và 1 địa chỉ của phần tử tiếp theo
+	- mọi hàm đều giống 2 thằng trên, nó có thêm 1 số hamgf
+
+
+Phần set: khác hoàn toàn List.
+
+
+Map: HashMap, treeMap, LinkedHashMap . Key- value
+HasMap<String, Object> map hoặc HasMap<String, Stringmap  = new HashMap<>();
+map.put("key","value");
+map.get("key");
+ưu điểm: set 1 đối tượng dữ liệu dựa trên key
+key có thể lấy id bỏ vô, sau cần gọi ra thì gọi map.get(id) đó ra
+lặp thì dùng Set<String> keys = map.keySet();
+keys.forEach(()
+
+stack(deque) và queue 
+pop lấy ra và push đẩy vào
